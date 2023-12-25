@@ -1,0 +1,277 @@
+//wap in java to input a single word
+import java.util.*;
+class sw
+{
+public static void main(String ak[])
+{
+Scanner s=new Scanner(System.in);
+System.out.println("Enter a word :");
+String str=s.next();
+System.out.println(str);
+}
+}
+
+//wap in java to enter a single line
+
+import java.util.*;
+class sl
+{
+public static void main(String ak[])
+{
+Scanner s=new Scanner(System.in);
+System.out.println("Enter a line:");
+String str=s.nextLine();
+System.out.println(str);
+}
+}
+
+//wap in java to input a single character
+
+import java.util.*;
+class sc
+{
+public static void main(String ak[])
+{
+Scanner s=new Scanner(System.in);
+System.out.println("Enter a Character:");
+Character c=s.next().charAt(0);
+System.out.println(c);
+}
+}
+
+//wap in java to reverse a string
+
+import java.util.*;
+class sr
+{
+public static void main(String ak[])
+{
+Scanner s=new Scanner(System.in);
+System.out.println("Enter a word:");
+String str1=s.next();
+String str2="";
+for(int i=str1.length()-1;i>=0;i--)
+{
+str2=str2+str1.charAt(i);
+}
+System.out.println(str2);
+}
+}
+
+//wap in java to check a string is palindrome or not
+
+import java.util.*;
+class sp
+{
+public static void main(String ak[])
+{
+Scanner s =new Scanner(System.in);
+System.out.println("Enter a string:");
+String str=s.next();
+String str1="";
+for(int i=str.length()-1;i>=0;i--)
+{
+str1=str1+str.charAt(i);
+}
+if(str.equalsIgnoreCase(str1))
+System.out.println("Palindrome No.");
+else
+System.out.println("Not a palindrome No.");
+}
+}
+
+//wap in java to check the string is palindrome or not using string //buffer
+
+import java.util.*;
+class spb
+{
+public static void main(String ak[])
+{
+Scanner s=new Scanner(System.in);
+System.out.println("Enter a word:");
+String str1=s.next;
+String str2="";
+for(int i=0;i<str1.length();i++)
+{
+char x=str1.charAt(i);
+if(str2.indexOf(x)==-1)
+str2=str2+x;
+
+}
+System.out.println(str2);
+}
+}
+
+///wap in java to count no. of vowels
+
+import java.util.*;
+class cv
+{
+public static void main(String ak[])
+{
+int c=0;
+Scanner s=new Scanner(System.in);
+System.out.println("Enter a string:");
+String str=s.next();
+for(int i=0;i<str.length();i++)
+{
+char x=str.charAt(i);
+if(x=='a'||x=='e'||x=='i'||x=='o'||x=='u')
+c++;
+
+}
+System.out.println("No.of vowels="+c);
+}
+}
+
+//wap in java to display a string without repetation of char
+
+import java.util.*;
+class srep
+{
+public static void main(String ak[])
+{
+Scanner s=new Scanner(System.in);
+System.out.println("Enter a word:");
+String str1=s.next();
+String str2="";
+for(int i=0;i<str1.length();i++)
+{
+char x=str1.charAt(i);
+if(str2.indexOf(x)==-1)
+str2=str2+x;
+
+}
+System.out.println(str2);
+}
+}
+
+
+//wap in java to merge two word/string and there must be  a space b/w two string as result
+
+import java.util.*;
+class sm
+{
+public static void main(String ak[]) 
+{
+int i;
+Scanner s=new Scanner(System.in);
+System.out.println("Enter two string:");
+String str1=s.next();
+String str2=s.next();
+String str3="";
+for( i=0;i<str1.length();i++)
+{
+str3=str3+str1.charAt(i);
+}
+str3=str3+" ";
+for(i=0;i<str2.length();i++)
+{
+str3=str3+str2.charAt(i);
+}
+System.out.println("After merge :"+str3);
+}
+}
+
+//wap in java to merge two line/string and there must be  a space b/w two string as result
+
+import java.util.*;
+class sm
+{
+public static void main(String ak[]) 
+{
+int i;
+Scanner s=new Scanner(System.in);
+System.out.println("Enter two string:");
+String str1=s.nextLine();
+String str2=s.nextLine();
+String str3="";
+for( i=0;i<str1.length();i++)
+{
+str3=str3+str1.charAt(i);
+}
+str3=str3+" ";
+for(i=0;i<str2.length();i++)
+{
+str3=str3+str2.charAt(i);
+}
+System.out.println("After merge :"+str3);
+}
+}
+
+//wap in java to enter a line and display each word
+
+import java.util.*;
+class eld
+{
+public static void main(String ak[])
+{
+Scanner s =new Scanner(System.in);
+System.out.println("Enter a Line:");
+String str=s.nextLine();
+String str1="";
+int i;
+for(i=0;i<str.length();i++)
+{
+char x=str.charAt(i);
+if(x==' ')
+{
+System.out.println(str1);
+str1=" ";
+}
+else
+str1=str1+x;
+}
+}
+}
+
+//wap in java to find the length of a given string
+
+import java.util.*;
+class sln
+{
+public static void main(String ak[])
+{
+Scanner s=new Scanner(System.in);
+System.out.println("Enter a string :");
+String str =s.next();
+int str1=str.length();
+System.out.println("Length="+str1);
+}
+}
+
+//wap in java to find the length of a given string without using length() //function
+
+import java.util.*;
+class lenw
+{
+public static void main(String ak[])
+{
+Scanner s=new Scanner(System.in);
+System.out.println("Enter a string :");
+String str =s.next();
+int i, c=0;
+char a[]=str.toCharArray();
+for(char ch:a){
+c++;
+}
+System.out.println(c);
+}
+}
+
+//wap in java to copy one string to another
+
+import java.util.*;
+class copys
+{
+public static void main(String ak[])
+{
+Scanner s=new Scanner(System.in);
+System.out.println("Enter a string:");
+String str1=s.nextLine();
+String str2=str1;
+//String str2=new String(str1);
+System.out.println("Your String:"+str1);
+System.out.println("New String:"+str2);
+}
+}

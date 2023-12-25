@@ -1,0 +1,130 @@
+/*2........................
+class Car {
+    private String brand;
+    private String model;
+
+    public Car(String brand, String model) {
+        this.brand = brand;
+        this.model = model;
+    }
+
+    public void startEngine() {
+        System.out.println("Starting the engine of " + brand + " " + model);
+    }
+}
+
+class Mahindra extends Car {
+    public Mahindra(String model) {
+        // Call the constructor of the superclass (Car)
+        super("Mahindra", model);
+    }
+
+    public void offRoadMode() {
+        System.out.println("Activating off-road mode for " + getModel());
+    }
+
+    // This method calls the startEngine() method from the Car class
+    public void drive() {
+        System.out.println("Driving the " + getBrand() + " " + getModel());
+        startEngine(); // Calling the startEngine() method from the superclass
+    }
+    
+    // Getter methods to access private fields from the superclass
+    private String getBrand() {
+        return super.brand;
+    }
+    
+    private String getModel() {
+        return super.model;
+    }
+}
+
+public class InheritanceExample {
+    public static void main(String[] args) {
+        Mahindra xuv500 = new Mahindra("XUV500");
+
+        // Call methods from the Mahindra class
+        xuv500.offRoadMode();
+        xuv500.drive();
+    }
+}
+
+*/
+
+3...........
+
+package lab3;
+/*
+3.Create an interface called "BankAccount" with methods called "deposit" and "withdraw".
+Create a class called "CheckingAccount" that implements the BankAccount interface and
+implements the "deposit" and "withdraw" methods.
+Create an object of the CheckingAccount class and call both the "deposit" and "withdraw" methods.
+ */
+
+import java.util.Scanner;
+
+//Define the BankAccount interface
+interface BankAccount{
+    //here ,we only declare the methods
+    void deposit(double amount);
+    void withdraw(double amount);
+}
+//implement the BankAccount interface in the CheckingAccount class
+class CheckingAccount implements BankAccount{
+    double balance;
+    // default constructor
+    CheckingAccount(){
+        balance=0.0; // let initial balance is zero
+    }
+
+    //define deposit method of type without return type and with argument
+    public void deposit(double amount) {
+        // logic to check balance is greater than $0 or not
+        if (amount > 0){
+            balance=balance+amount; // update the balance if balance is greater than $0
+            System.out.println("You Deposited  $"+amount+ " in your Bank Account.");//display the deposit amount
+        }
+        else {
+            System.out.println("Please deposit amount greater then $ 0.");
+        }
+    }
+
+    //define withdraw method of type without return type and with argument
+    public void withdraw(double amount) {
+        if (amount>0 && amount <=balance){
+            balance=balance-amount; // update the balance after withdraw
+            System.out.println("You withdraw $ "+amount+" from your Bank Account."); // display the withdrawal amount
+        }
+        else{
+            System.out.println("Insufficient Balance .Please deposit some amount.");
+        }
+    }
+
+    //this method display total balance in your account
+    double getBalance(){
+        return balance;
+    }
+}
+public class TestBankAccount {
+    public static void main(String[] args) {
+        //create object of Scanner class to take input from user
+        Scanner scanner=new Scanner(System.in);
+
+
+
+        System.out.print("Enter Amount to Deposit : ");
+        double depositAmount=scanner.nextDouble();
+
+        System.out.println("Enter Amount to withdraw : ");
+        double withdrawAmount=scanner.nextDouble();
+
+        //create an object of CheckingAccount class
+        CheckingAccount checkingAccount=new CheckingAccount();
+
+        //call the methods by object of child class
+        checkingAccount.deposit(depositAmount);
+        checkingAccount.withdraw(withdrawAmount);
+        System.out.println("Your Account Balanced is : "+checkingAccount.getBalance());
+    }
+}
+
